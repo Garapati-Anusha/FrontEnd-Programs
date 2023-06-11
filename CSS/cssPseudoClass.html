@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Class</title>
+    <style>
+        .p1::first-letter  {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+        /* .p1::after {
+            content: url("smiley.gif");
+            
+        } */
+        q:lang(no) {
+            quotes: "**" "**";
+        }
+        .p1::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p><q lang="no">CSS Pseudo Class Example for quotation marks</q> </p>
+    <p class="p1">Example for Pseudo Element</p>
+</body>
+</html>

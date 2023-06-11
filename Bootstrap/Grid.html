@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .outerbox {
+            border:2px solid purple;
+        }
+        .box{
+            border: 2px solid pink;
+        }
+        [class^="col-"] {
+            background-color: aqua;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container outerbox">
+        <p>Row with four same size columns:</p>
+        <div class="row box">
+          <div class="col-3">col</div>
+          <div class="col-3">col</div>
+          <div class="col-3">col</div>
+          <div class="col-3">col</div>
+        </div>
+        <br>
+        <p>Row with different size columns:</p>
+        <div class="row box">
+          <div class="col-8">col-8</div>
+          <div class="col-4">col-4</div>
+        </div>
+        <br>
+        <p>For small devices the columns occupy full width:</p>
+        <div class="row box">
+          <div class="col-md-5">col-5</div>
+          <div class="col-md-4">col-4</div>
+          <div class="col-md-3">col-3</div>
+        </div>
+        <br>
+        <p>Mix and Match: For xs and small devices the columns occupy 50% width and from middle devices 
+            the columns occupy 33.3% width</p>
+        <div class="row box">
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+          </div>
+      </div>    
+</body>
+</html>

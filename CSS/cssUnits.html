@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em-rem</title>
+    <style>
+        .parent {
+            font-size: 15px;
+        }
+        .em-child {
+            font-size: 2em;
+        }
+        .rem-child {
+            font-size: 2rem;
+        }
+    </style>
+    
+</head>
+<body>
+    <h2 style="color:red"> Rem Example:</h2>
+    <div class="parent">
+        I'm 15px
+        <div class="rem-child">
+            I'm 15px * 2 = 30px
+            <div class="rem-child">
+                I'm 15px * 2 = 30px
+                <div class="rem-child">
+                    I'm 15px * 2 = 30px.
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 style="color:red">Em Example:</h2>
+    <div class="parent">
+        I'm 15px
+        <div class="em-child">
+            I'm 15px * 2 = 30px
+            <div class="em-child">
+                I'm 30px * 2 = 60px
+                <div class="em-child">
+                    I'm 60px * 2 = 120px.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        div {
+            background-color: coral;
+            width: 200px;
+            height: 65px;
+            border: 1px solid;
+            float:left;
+        }
+
+        div.visible {
+            overflow: visible;
+        }
+
+        div.hidden {
+            overflow: hidden;
+            margin-left:50px;
+        }
+
+        div.scroll {
+            overflow: scroll;
+            margin-left: 30px;
+        }
+
+        div.auto {
+            overflow: auto;
+            margin-left: 30px;
+        }
+
+        div.xy{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="visible">
+        <b>Overflow-Visible</b>
+        You can use the overflow property when you want to have better control 
+        of the layout. The overflow property specifies what happens if content 
+        overflows an element's box.
+    </div>
+    <div class="hidden">
+        <b>Overflow-Hidden</b>
+        You can use the overflow property when you want to have better control 
+        of the layout. The overflow property specifies what happens if content 
+        overflows an element's box.
+    </div>
+    <div class="scroll">
+        <b>Overflow-Scroll</b>
+        You can use the overflow property when you want to have better control 
+        of the layout. The overflow property specifies what happens if content 
+        overflows an element's box.
+    </div>
+    <div class="auto">
+        <b>Overflow-Auto</b>
+        You can use the overflow property when you want to have better control 
+        of the layout. The overflow property specifies what happens if content 
+        overflows an element's box.
+    </div>
+    <div class="xy">
+        <b>Overflow-x , y</b>
+        You can use the overflow property when you want to have better control 
+        of the layout. The overflow property specifies what happens if content 
+        overflows an element's box.
+    </div>
+</body>
+</html>
