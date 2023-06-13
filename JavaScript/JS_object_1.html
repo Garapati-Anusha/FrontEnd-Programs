@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Objects</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <br>
+    <p id="demo2"></p>
+    <br>
+    <p id="demo3"></p>
+    <br>
+    <p id="demo4"></p>
+    <br>
+    <p id="demo5"></p>
+
+    <script>
+        const car = {
+            model: "SUV",
+            year : 2023,
+            color: "Red"
+        }
+
+        const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyecolor: "blue",
+        date: new Date(),
+        fullName: function() {
+                     return this.firstName + " " + this.lastName;
+        }
+        };
+
+        const dog = {
+            name: "Tommy",
+            BOB : 2020,
+            color: "Brown"
+        }
+
+        let txt = ""
+        document.getElementById("demo1").innerHTML = person.firstName + " is " + person["age"] + " years old.";
+        for (let x in car) {
+            txt += car[x] + " ";
+            }
+        document.getElementById("demo2").innerHTML =  txt;
+        let name = person.fullName();
+        console.log(name);
+
+        dog.description = function () {
+            return (this.name + " is a " + this.color + " dog.").toUpperCase();
+        };
+        console.log(dog.description());
+
+        const myArray = Object.values(car);
+        document.getElementById("demo3").innerHTML = myArray;
+
+        document.getElementById("demo4").innerHTML = JSON.stringify(person);
+
+        person.fullName = person.fullName.toString();
+        document.getElementById("demo5").innerHTML = JSON.stringify(person);
+
+    </script>    
+</body>
+</html>
