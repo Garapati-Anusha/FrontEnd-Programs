@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <div class="mt-5 border border-dark w-50 mx-auto p-3">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ipsum deserunt velit accusantium, aliquid asperiores provident ratione commodi sed, quam amet aliquam alias est nostrum saepe sapiente! Aspernatur, non doloribus?</p>
+            <div class="d-none d-sm-block mx-auto bg-dark w-50 text-center text-white">
+                Centered Element
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row bd-highlight mt-3 border border-dark">
+        <div class="p-2 bd-highlight">Flex item 1</div>
+        <div class="p-2 bd-highlight">Flex item 2</div>
+        <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+    <div class="d-flex justify-content-between mt-3 border border-dark">
+        <div class="p-2 bd-highlight">Flex item 1</div>
+        <div class="p-2 bd-highlight">Flex item 2</div>
+        <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h2> Form </h2>
+        </div>
+            <div class="col-lg-6">
+                <form action="">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="my@email.com">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="name" class="form-control" id="name">
+                    <select class="form-select mt-3" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="form-floating my-5">
+                        <textarea name="query" id="query" style="height:120px" class="form-control" ></textarea>
+                    </div>
+                    <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        
+    </div>
+</body>
+</html>
