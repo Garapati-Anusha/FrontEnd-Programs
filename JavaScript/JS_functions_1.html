@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        function Sum(a, b) {
+            return a + b;
+        }
+        let x = Sum(4, 3) ;
+
+        const Mul = (x, y) => { return x * y };
+
+        function Total(...args) {
+            let total = 0;
+            for (let arg of args) total += arg;
+            return total;
+        }
+        
+        function FindMin(...args) {
+            let min = Infinity;
+            for(let i=0; i <= args.length; i++){
+                if (arguments[i] < min) {
+                    min = arguments[i];
+                }
+            }
+             return min;
+        }
+
+        document.getElementById("demo1").innerHTML = x;
+        document.getElementById("demo2").innerHTML = Sum.toString();
+        document.getElementById("demo3").innerHTML = Mul(2,3);
+        document.getElementById("demo4").innerHTML = Total(2,3,4,5,6,7);
+        document.getElementById("demo5").innerHTML = FindMin(-2,35,-90,56,67);
+    </script>
+</body>
+</html>

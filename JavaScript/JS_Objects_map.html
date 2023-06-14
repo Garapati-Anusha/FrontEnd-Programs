@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Map</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        const marks = new Map([
+            ["English",80],["Math",100],["Science",90]]);
+        
+        marks.set("Social",75) ;
+
+        document.getElementById("demo1").innerHTML = marks.get("Social");
+        document.getElementById("demo2").innerHTML = "Number of subjects: " + marks.size;
+
+        marks.delete("English");
+        document.getElementById("demo3").innerHTML = marks.has("English");
+        let text = "";
+            marks.forEach (function(value, key) {
+                text += key + ' = ' + value +"<br>";
+            })
+        document.getElementById("demo4").innerHTML = marks instanceof Map;
+        document.getElementById("demo5").innerHTML = text;
+        let total = 0;
+        for (const x of marks.values()) {
+            total += x;
+        }
+        document.getElementById("demo6").innerHTML = "Total Marks = " + total;
+    </script>    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <button type="button" onclick="myFunction()">Count!</button>
+    <script>
+        const employee = {
+            idName: function(skill,role) {
+                return this.name + "-" + this.id + " is a " +skill + " "+ role;
+            }
+        }
+        const employee1 = {
+            name:"John",
+            id: 100
+        }
+        const employee2 = {
+            name:"Mary",
+            id: 110
+        }
+        
+        const person = {
+            firstName:"John",
+            lastName: "Doe",
+            display: function () {
+                let x = document.getElementById("demo4");
+                x.innerHTML = this.firstName + " " + this.lastName;
+                
+            }
+        }
+
+        let display = person.display.bind(person);
+        setTimeout(display, 3000);
+        
+        
+        document.getElementById("demo1").innerHTML = employee.idName.call(employee1,"react","developer");
+        document.getElementById("demo2").innerHTML = employee.idName.apply(employee2,["data","analyst"]);;
+        document.getElementById("demo3").innerHTML = Math.max.apply(Math, [1,2,3]);
+
+        function numberGenerator() {
+            let num = 1;
+            function checkNumber() { 
+                console.log(num);
+            }
+            num++;
+            return num;
+        }
+
+        let number = numberGenerator();
+        
+
+        function myFunction(){
+        document.getElementById("demo5").innerHTML = number;
+        }
+        
+    </script>
+</body>
+</html>

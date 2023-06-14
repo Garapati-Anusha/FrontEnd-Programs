@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        myNumbers = {};
+        myNumbers[Symbol.iterator] = function() {
+            let n = 0;
+            done = false;
+            return {
+                next() {
+                n += 5;
+                if (n > 50) {done = true}
+                return {value:n, done:done};
+                }
+            };
+        }
+
+        let iterator = myNumbers[Symbol.iterator]();
+
+        let text = ""
+        while (true) {
+        const result = iterator.next();
+        if (result.done) break;
+        text += result.value +"<br>";
+        }
+
+        let txt = ""
+        for (const num of myNumbers) {
+             txt += num +"<br>"
+            }
+
+        document.getElementById("demo1").innerHTML = text;
+        document.getElementById("demo2").innerHTML = txt;
+    </script>
+    
+</body>
+</html>
