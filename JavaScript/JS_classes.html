@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    
+    <script>
+        class Person {
+            constructor(name) {
+                this.employeeName = name;
+            }
+            intro() {
+                return 'I am ' + this.employeeName;
+            }
+            get employeeName() {
+                    return this._employeeName;
+            }
+            set employeeName(x) {
+                this._employeeName = x;
+            }
+            static hi(x) {
+                return "Hi " + x.employeeName;
+            }
+        }
+
+        class Employee extends Person {
+            constructor(name, rol) {
+                super(name);
+                this.role = rol;
+            }
+            show() {
+                return this.intro() + ', I work as a ' + this.role;
+            }
+        }
+
+        let employee1 = new Employee("John", "Developer");
+        document.getElementById("demo1").innerHTML = employee1.show();       
+        document.getElementById("demo2").innerHTML = employee1.employeeName;
+
+        employee1.employeeName = "Smith";
+        document.getElementById("demo3").innerHTML = employee1.employeeName;
+
+        document.getElementById("demo4").innerHTML = Employee.hi(employee1);
+                
+    </script>
+</body>
+</html>

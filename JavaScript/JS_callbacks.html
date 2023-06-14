@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Callbacks</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        setTimeout(myFunction("Hello!"), 3000);
+        
+        function myFunction(value) {
+        document.getElementById("demo1").innerHTML = value;
+        }
+
+        setInterval(myFun, 1000);
+
+        // function myFun() {            
+        //     document.getElementById("demo2").innerHTML += "Hi" + "<br>";            
+        // }
+    </script>
+    
+</body>
+</html>
