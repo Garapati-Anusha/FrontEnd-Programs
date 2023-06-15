@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Regular Expresions</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        let str = "We will, we will rock you";
+        let numStr = "+7(903)-123-45-67";
+        let str1 = "Mary had a little lamb";
+        document.getElementById("demo1").innerHTML = str.match(/we/gi);
+        document.getElementById("demo2").innerHTML = "We will go to a trip and we will enjoy.".replace(/we/ig, "I")
+        document.getElementById("demo3").innerHTML = "I like HTML5".match(/\s\w\w\w\w\d/);
+        document.getElementById("demo4").innerHTML = numStr.replace(/\D/g,"");
+        document.getElementById("demo5").innerHTML = /^Mary/.test(str1);
+        document.getElementById("demo6").innerHTML = /lamb$/.test(str1);
+    </script>
+    
+</body>
+</html>
