@@ -1,0 +1,8 @@
+.header{
+    background-color: royalblue;
+}
+
+.item{
+    list-style-type: none;
+    padding: 10px 5px;
+}
