@@ -1,5 +1,6 @@
 import React from 'react';
-import {FaTrash} from 'react-icons/fa';
+// import {FaTrash} from 'react-icons/fa';
+import ItemList from './ItemList';
 
 const Lists = ({items,  handleChange, handleDelete}) => {
     // const items = [{id:1, checked:false, item:"Apples"},
@@ -20,15 +21,16 @@ const Lists = ({items,  handleChange, handleDelete}) => {
   return (
     <div>
       {items.length ? (
-        <ul>
-            {items.map((item) =>(
-                <li className="item" key={item.id}>
-                    <input type="checkbox" onChange= {() => handleChange(item.id)} checked={item.checked}/>
-                    <label>{item.item}</label>
-                    <FaTrash role="button" onClick={() => handleDelete(item.id)}/>
-                </li>
-            ))}
-        </ul>    
+        // <ul>
+        //     {items.map((item) =>(
+        //         <li className="item" key={item.id}>
+        //             <input type="checkbox" onChange= {() => handleChange(item.id)} checked={item.checked}/>
+        //             <label>{item.item}</label>
+        //             <FaTrash role="button" onClick={() => handleDelete(item.id)}/>
+        //         </li>
+        //     ))}
+        // </ul>    
+        <ItemList items={items}  handleChange={handleChange} handleDelete={handleDelete}/>
       ) : <p style={{fontSize:'2em'}}>List is empty</p>  }
     </div>
   )
