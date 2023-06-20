@@ -9,7 +9,7 @@ const ChangeColor = () => {
 
   return (
     <div>
-        <div className='colorBox' style={{backgroundColor:mycolor}}></div>
+        <div className='colorBox mt-3' style={{backgroundColor:mycolor}}></div>
         <br></br>
         <input type='text' name="color" onChange={(e) =>setMycolor(e.target.value)}/>
     </div>

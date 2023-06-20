@@ -71,8 +71,7 @@ footer {
   background-color: mediumblue;
   color: aliceblue;
   place-content: center;
-  position: absolute;
-  bottom:0;
+  margin-top: 50px;
 }
 
 .addForm {
