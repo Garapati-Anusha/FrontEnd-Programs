@@ -21,19 +21,24 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
+            <li className="nav-item me-2">
               <NavLink className="nav-link" exact to="/crud">
                 CRUD
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-2">
               <NavLink className="nav-link" exact to="/toDoApp">
                 To Do App
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-2">
               <NavLink className="nav-link" exact to="/changeColor">
                 Change Color
+              </NavLink>
+            </li>
+            <li className="nav-item me-2">
+              <NavLink className="nav-link" exact to="/customHook">
+                Custom Hook
               </NavLink>
             </li>
           </ul>

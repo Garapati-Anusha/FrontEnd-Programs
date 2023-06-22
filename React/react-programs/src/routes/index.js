@@ -9,6 +9,7 @@ import Navbar from '../pages/NavBar';
 import ChangeColor from '../pages/ChangeColor';
 import ToDoApp from '../pages/ToDoApp';
 import Home from '../pages/Home';
+import UserForm from '../pages/UserForm';
 
 const Routerpage = () => {
   return (
@@ -23,6 +24,7 @@ const Routerpage = () => {
                 <Route path="/users/:id" element={<ViewUser/>} />
                 <Route path="/changeColor" element={<ChangeColor/>} />
                 <Route path="/toDoApp" element={<ToDoApp/>} />
+                <Route path="/customHook" element={<UserForm/>} />
             </Routes>
         </Router>
       
